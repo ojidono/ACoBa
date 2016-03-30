@@ -28,7 +28,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Configuration
-@ComponentScan("fr.treeptik.tp.blog")
+@ComponentScan("fr.treeptik.acoba")
 @EnableWebMvc
 public class DispatcherServletConfiguration extends WebMvcConfigurerAdapter {
 

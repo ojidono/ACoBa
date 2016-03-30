@@ -24,7 +24,7 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-@EnableJpaRepositories(basePackages = { "fr.treeptik.tp.blog.dao" })
+@EnableJpaRepositories(basePackages = { "fr.treeptik.acoba.dao" })
 public class DatabaseConfiguration {
 
 	private final static Logger LOGGER = Logger	.getLogger(DatabaseConfiguration.class);
