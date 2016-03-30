@@ -12,7 +12,7 @@ public interface TransactionService extends GenericService<Transaction, Long>{
 	public List<Transaction> listBefore(Date end);
 	public List<Transaction> listAfter(Date start);
 	public List<Transaction> list(Collection<Categorie> categories);
-	public List<Transaction> listCurrentYear();
-	public List<Transaction> listCurrentMonth();
-	public List<Transaction> listCurrentWeek();
+//	public List<Transaction> listCurrentYear();
+//	public List<Transaction> listCurrentMonth();
+//	public List<Transaction> listCurrentWeek();
 }
