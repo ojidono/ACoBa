@@ -25,9 +25,9 @@ public class Transaction implements Serializable {
 	private Date date;
 
 	@ManyToOne
-	private Compte from;
+	private Compte source;
 	@ManyToOne
-	private Compte to;
+	private Compte destination;
 	@ManyToOne
 	private Categorie categorie;
 
@@ -65,21 +65,21 @@ public class Transaction implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
-	public Compte getFrom() {
-		return from;
+	
+	public Compte getSource() {
+		return source;
 	}
 
-	public void setFrom(Compte from) {
-		this.from = from;
+	public void setSource(Compte source) {
+		this.source = source;
 	}
 
-	public Compte getTo() {
-		return to;
+	public Compte getDestination() {
+		return destination;
 	}
 
-	public void setTo(Compte to) {
-		this.to = to;
+	public void setDestination(Compte destination) {
+		this.destination = destination;
 	}
 
 	public Categorie getCategorie() {
