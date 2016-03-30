@@ -20,6 +20,7 @@ public class Transaction implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private Long valeur;
 	private String nom;
 	private Date date;
 
@@ -39,6 +40,14 @@ public class Transaction implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Long getValeur() {
+		return valeur;
+	}
+
+	public void setValeur(Long valeur) {
+		this.valeur = valeur;
 	}
 
 	public String getNom() {
