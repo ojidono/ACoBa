@@ -6,14 +6,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import fr.treeptik.pojo.User;
-import fr.treeptik.service.GenericService;
+import fr.treeptik.service.UserService;
 
 @Controller
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/api/user")
 public class UserController extends GenericController<User> {
+	private UserService mainService;
 	
 	@Inject
-	public UserController(GenericService<User, Long> service){
+	public UserController(UserService service){
 		super(service);
+		this.mainService = service;
 	}
 }

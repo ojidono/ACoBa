@@ -5,15 +5,17 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import fr.treeptik.pojo.User;
-import fr.treeptik.service.GenericService;
+import fr.treeptik.pojo.Compte;
+import fr.treeptik.service.CompteService;
 
 @Controller
-@RequestMapping(value = "/user")
-public class CompteController extends GenericController<User> {
+@RequestMapping(value = "/api/compte")
+public class CompteController extends GenericController<Compte> {
+	private CompteService mainService;
 	
 	@Inject
-	public CompteController(GenericService<User, Long> service){
+	public CompteController(CompteService service){
 		super(service);
+		this.mainService = service;
 	}
 }

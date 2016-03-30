@@ -6,14 +6,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import fr.treeptik.pojo.Transaction;
-import fr.treeptik.service.GenericService;
+import fr.treeptik.service.TransactionService;
 
 @Controller
-@RequestMapping(value = "/transaction")
+@RequestMapping(value = "/api//transaction")
 public class TransactionController extends GenericController<Transaction> {
+	private TransactionService mainService;
 	
 	@Inject
-	public TransactionController(GenericService<Transaction, Long> service){
+	public TransactionController(TransactionService service){
 		super(service);
+		this.mainService = service;
 	}
 }
