@@ -4,7 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+
+<c:url var="urlResources" value="/resources" />
+<!-- core styles -->
+
+<script src="${urlResources}/plugins/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet"
+	href="${urlResources}/bootstrap/css/bootstrap.min.css">
+<script src="${urlResources}/bootstrap/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="${urlResources}/css/animate.min.css">
+
+
+<title>ACoBa</title>
 </head>
 <body>
 
