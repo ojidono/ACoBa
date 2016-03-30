@@ -27,7 +27,7 @@
 			<form action="j_spring_security_check" method="POST">
 				<div class="row">
 					<div class="col-lg-8 col-md-8 col-xs-8">
-						<h1 id="banner">Bienvenue sur mon Blog</h1>
+						<h1 id="banner">ACoba</h1>
 					</div>
 				</div>
 				<div class="row">

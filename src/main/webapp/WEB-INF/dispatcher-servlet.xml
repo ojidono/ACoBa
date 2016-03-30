@@ -21,9 +21,9 @@
 	<context:component-scan base-package="fr.treeptik" />
 	<mvc:annotation-driven />
 
-	<jdbc:initialize-database data-source="dataSource">
-		<jdbc:script location="classpath:init.sql" />
-	</jdbc:initialize-database>
+<!-- 	<jdbc:initialize-database data-source="dataSource"> -->
+<!-- 		<jdbc:script location="classpath:init.sql" /> -->
+<!-- 	</jdbc:initialize-database> -->
 
 
 	<!-- Aide la Servlet à trouvé la bonne vue en se basant sur le nom logique 
