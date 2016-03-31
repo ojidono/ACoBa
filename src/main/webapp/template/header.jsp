@@ -36,8 +36,6 @@
 			<img class="img-responsive"
 				src="/ACoBa/resources/img/logo2.png" />
 		</div>
-		
-
 	</div>
 </body>
 </html>

@@ -26,104 +26,30 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 col-lg-3 col-md-3 col-xs-3">
-				    <div class="sidebar-nav">
-				      <div class="navbar navbar-default" role="navigation">
-				        <div class="navbar-collapse collapse sidebar-navbar-collapse">
-				          <ul class="nav nav-pills nav-stacked">
-				          <br/>
-				            <li><a class="label label-danger" href="#">home</a></li>
-				            <br/>
-				            <li><a class="label label-danger" href="#">Tableau de Bord</a></li>
-				            <br/>
-				            <li><a class="label label-danger" href="#">Statistiques</a></li>
-				            <br/>
-				            <li><a class="label label-danger" href="#">Virement</a></li>
-				            <br/>
-				            <li><a class="label label-danger" href="#">Contact</a></li>
-				            <br/>
-				        
-				          </ul>
-				        </div>
-				      </div>
-				    </div>
-				
-				
-<!-- 				<ul class="nav nav-pills nav-stacked"> -->
-<!-- 					<li class="active"><a href="#">Home</a></li> -->
-<!-- 					<li><a href="#">Menu 1</a></li> -->
-<!-- 					<li><a href="#">Menu 2</a></li> -->
-<!-- 					<li><a href="#">Menu 3</a></li> -->
-<!-- 				</ul> -->
+				<div class="sidebar-nav">
+					<div class="navbar navbar-default" role="navigation">
+						<div class="navbar-collapse collapse sidebar-navbar-collapse">
+							<ul class="nav nav-pills nav-stacked">
+								<br />
+								<li><a class="label label-danger" href="#">home</a></li>
+								<br />
+								<li><a class="label label-danger" href="#" id="board">Tableau de Bord</a></li>
+								<br />
+								<li><a class="label label-danger" href="#">Statistiques</a></li>
+								<br />
+								<li><a class="label label-danger" href="#" id="virement">Virement</a></li>
+								<br />
+								<li><a class="label label-danger" href="#">Contact</a></li>
+								<br />
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-9 col-lg-9 col-md-9 col-xs-9">Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main contMain content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here ent
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here Main content
-				goes here </div>
+			<div class="col-sm-9 col-lg-9 col-md-9 col-xs-9" id="content">
+
+
+			</div>
 		</div>
 	</div>
 
@@ -131,6 +57,38 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 		<jsp:param value="active" name="menuAdministrateurActive" />
 		<jsp:param value="Solices - Détails Administrateur" name="titreOnglet" />
 	</jsp:include>
+
+	<script>
+		/* SI click sur Id = board ==> affichage board dans content */
+
+		$('#board').click(function(e) {
+			e.preventDefault();
+			$.ajax({
+				url : 'board.jsp',
+				type : 'GET',
+				dataType : 'html',
+				success : function(code_html, statut) {
+					//$(code_html).appendTo('#content');
+					$('#content').html(code_html);
+				}
+			});
+		});
+
+		$('#virement').click(function(e) {
+			e.preventDefault();
+			$.ajax({
+				url : 'virement.jsp',
+				type : 'GET',
+				dataType : 'html',
+				success : function(code_html, statut) {
+					//$(code_html).appendTo('#content');
+					$('#content').html(code_html);
+				}
+			});
+		});
+		
+		
+	</script>
 
 </body>
 </html>
