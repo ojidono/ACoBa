@@ -18,7 +18,7 @@
 <sec:authentication var="principal" property="principal" />
 <c:url var="urlGetPrincipalId" value="/auteur/principal/id" />
 
-<title>Lister Auteurs</title>
+<title>ACoBa</title>
 </head>
 
 <body>
