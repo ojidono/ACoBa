@@ -4,7 +4,6 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<jsp:include page="/template/header.jsp" />
 
 <div class="container">
 	<div class="page-header">
@@ -54,5 +53,3 @@
 	
 	</div>
 </div>
-
-<jsp:include page="/template/footer.jsp" />
