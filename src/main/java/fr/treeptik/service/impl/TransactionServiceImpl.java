@@ -52,7 +52,7 @@ public class TransactionServiceImpl extends GenericServiceImpl<Transaction, Long
 		Date end = new Date();
 		Date start;
 		try {
-			start = new SimpleDateFormat("yyyy-MM").parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR))+"-"+String.valueOf(Calendar.getInstance().get(Calendar.MONTH)));
+			start = new SimpleDateFormat("yyyy-MM").parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR))+"-"+String.valueOf(Calendar.getInstance().get(Calendar.MONTH)+1));
 		} catch (ParseException e) {
 			start = new Date();
 		}
