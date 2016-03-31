@@ -32,7 +32,7 @@
 
 	<div class="container-fluid">
 
-		<div class="row">
+		<div class="row" style="min-height: 220px; overflow: hidden;">
 			<img class="img-responsive"
 				src="/ACoBa/resources/img/logo2.png" />
 		</div>
