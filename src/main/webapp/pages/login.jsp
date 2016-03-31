@@ -8,15 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <c:url var="urlResources" value="/resources" />
 <!-- core styles -->
-
-<script src="${urlResources}/plugins/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet"
-	href="${urlResources}/bootstrap/css/bootstrap.min.css">
-<script src="${urlResources}/bootstrap/js/bootstrap.min.js"></script>
-
-<link rel="stylesheet" href="${urlResources}/css/animate.min.css">
-<sec:authentication var="principal" property="principal" />
-<c:url var="urlGetPrincipalId" value="/auteur/principal/id" />
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <title>ACoBa</title>
 </head>
