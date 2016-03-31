@@ -19,7 +19,8 @@ public interface TransactionService extends GenericService<Transaction, Long>{
 	public List<Transaction> listCurrentWeek();
 	
 	
-	
+
+	public List<Transaction> list(Compte entity);
 	public List<Transaction> listBefore(Compte entity, Date end);
 	public List<Transaction> listAfter(Compte entity, Date start);
 	public List<Transaction> list(Compte entity, Date start, Date end);
@@ -29,7 +30,8 @@ public interface TransactionService extends GenericService<Transaction, Long>{
 	public List<Transaction> listCurrentWeek(Compte entity);
 	
 	
-	
+
+	public List<Transaction> list(User entity);
 	public List<Transaction> listBefore(User entity, Date end);
 	public List<Transaction> listAfter(User entity, Date start);
 	public List<Transaction> list(User entity, Date start, Date end);

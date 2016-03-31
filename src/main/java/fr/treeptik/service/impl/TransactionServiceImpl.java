@@ -80,7 +80,15 @@ public class TransactionServiceImpl extends GenericServiceImpl<Transaction, Long
 	/**************************************************************************
 	 * 				Recherches par Compte sur dates et catégories
 	 *************************************************************************/
-	
+
+
+	public List<Transaction> list(Compte entity) {
+		List <Transaction> 
+		sources 		=mainDAO.findBySource(entity),
+		destinations	=mainDAO.findByDestination(entity);
+	sources.addAll(destinations);
+	return sources;
+	}
 	public List<Transaction> listBefore(Compte entity, Date end) {
 		List <Transaction> 
 			sources 		=mainDAO.findBySourceAndDateBefore(entity, end),
@@ -141,7 +149,14 @@ public class TransactionServiceImpl extends GenericServiceImpl<Transaction, Long
 	/**************************************************************************
 	 * 				Recherches par User sur dates et catégories
 	 *************************************************************************/
-	
+
+	public List<Transaction> list(User entity) {
+		List <Transaction> 
+			sources 		=mainDAO.findBySourceUser(entity),
+			destinations	=mainDAO.findByDestinationUser(entity);
+		sources.addAll(destinations);
+		return sources;
+	}
 	public List<Transaction> listBefore(User entity, Date end) {
 		List <Transaction> 
 			sources 		=mainDAO.findBySourceUserAndDateBefore(entity, end),

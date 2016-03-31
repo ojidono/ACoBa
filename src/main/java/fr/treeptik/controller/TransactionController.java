@@ -65,7 +65,11 @@ public class TransactionController extends GenericController<Transaction> {
 	/**************************************************************************
 	 * 				Recherches Compte sur dates et catégories
 	 *************************************************************************/
-	
+
+	@RequestMapping(value = "/list/compte", method = RequestMethod.POST)
+	public @ResponseBody List<Transaction> list(@RequestBody Compte entity){
+		return mainService.list(entity);
+	}
 	@RequestMapping(value = "/list/compte/date/before", method = RequestMethod.POST)
 	public @ResponseBody List<Transaction> listBefore(@RequestBody Compte entity, @RequestBody Date end){
 		return mainService.listBefore(entity, end);
@@ -98,7 +102,11 @@ public class TransactionController extends GenericController<Transaction> {
 	/**************************************************************************
 	 * 				Recherches User sur dates et catégories
 	 *************************************************************************/
-	
+
+	@RequestMapping(value = "/list/user", method = RequestMethod.POST)
+	public @ResponseBody List<Transaction> list(@RequestBody User entity){
+		return mainService.list(entity);
+	}
 	@RequestMapping(value = "/list/user/date/before", method = RequestMethod.POST)
 	public @ResponseBody List<Transaction> listBefore(@RequestBody User entity, @RequestBody Date end){
 		return mainService.listBefore(entity, end);
