@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import fr.treeptik.service.GenericService;
 
-public class GenericController <T>{
+public abstract class GenericController <T>{
 	public GenericService<T, Long> genericService;
 	
 	public GenericController(GenericService<T, Long> service){
