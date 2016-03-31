@@ -1,8 +1,15 @@
 
-#logo{
-  margin:0;
-  padding:0;
-  background: url(/ACoBa/resources/img/logo.png) no-repeat center fixed; 
-/*   -webkit-background-size: cover;  */
-  background-size: cover; 
+
+footer{
+	background-color:#d9534f;
+}
+
+#basFooter {
+list-style-type:none;
+color : black;
+}
+
+#basFooter a{
+	
+	color:white;
 }

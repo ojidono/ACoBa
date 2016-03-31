@@ -5,20 +5,36 @@
 <hr />
 <footer>
 	<div class="container">
-		<div class="col-lg-4">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 			<nav>
-				<ul>
+				<ul id="basFooter">
+				<br/>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">DigDashBoard</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<nav>
+				<ul id="basFooter">
+				<br/>
 					<li><a href="#">Statistiques</a></li>
 					<li><a href="#">Virement</a></li>
 				</ul>
 			</nav>
-		</div>
-		<div class="col-lg-4">
 		
 		</div>
-		<div class="col-lg-4">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<nav>
+				<ul id="basFooter">
+				<br/>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<br/>
 			<p>Copyright Miaouwww Company</p>
 		</div>
 	</div>
