@@ -20,7 +20,7 @@
 </head>
 <body>
 
-	<img src="images/auteur.jpg">
+	<img src="${pageContext.servletContext.contextPath}/resources/img/auteur.jpg">
 
 </body>
 </html>
