@@ -1,6 +1,8 @@
 package fr.treeptik.service.impl;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -36,14 +38,35 @@ public class TransactionServiceImpl extends GenericServiceImpl<Transaction, Long
 	public List<Transaction> list(Collection<Categorie> categories) {
 		return mainDAO.findByCategorieIn(categories) ;
 	}
-//	public List<Transaction> listCurrentYear() {
-//		return mainDAO.findByDateBetween(SimpleDateFormat.getInstance().format(SystemClockFactory.getDatetime()), SystemClockFactory.getDatetime());
-//	}
-//	public List<Transaction> listCurrentMonth() {
-//		return mainDAO.findByDateBetween(start, SystemClockFactory.getDatetime());
-//	}
-//	public List<Transaction> listCurrentWeek() {
-//		return mainDAO.findByDateBetween(start, SystemClockFactory.getDatetime());
-//	}
+	public List<Transaction> listCurrentYear() {
+		Date end = new Date();
+		Date start;
+		try {
+			start = new SimpleDateFormat("yyyy").parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR)));
+		} catch (ParseException e) {
+			start = new Date();
+		}
+		return mainDAO.findByDateBetween(start,end);
+	}
+	public List<Transaction> listCurrentMonth() {
+		Date end = new Date();
+		Date start;
+		try {
+			start = new SimpleDateFormat("yyyy-MM").parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR))+"-"+String.valueOf(Calendar.getInstance().get(Calendar.MONTH)));
+		} catch (ParseException e) {
+			start = new Date();
+		}
+		return mainDAO.findByDateBetween(start,end);
+	}
+	public List<Transaction> listCurrentWeek() {
+		Date end = new Date();
+		Date start;
+		try {
+			start = new SimpleDateFormat("yyyy-ww").parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR))+"-"+String.valueOf(Calendar.getInstance().get(Calendar.WEEK_OF_YEAR)));
+		} catch (ParseException e) {
+			start = new Date();
+		}
+		return mainDAO.findByDateBetween(start,end);
+	}
 
 }
