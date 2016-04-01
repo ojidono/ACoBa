@@ -36,6 +36,8 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 								<li><a class="label label-danger" href="#" id="board">Tableau
 										de Bord</a></li>
 								<br />
+								<li><a class="label label-danger" href="#" id="compte">Mes Comptes</a></li>
+								<br />
 								<li><a class="label label-danger" href="#">Statistiques</a></li>
 								<br />
 								<li><a class="label label-danger" href="#" id="virement">Virement</a></li>
@@ -99,7 +101,6 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 	</jsp:include>
 
 	<script>
-		/* SI click sur Id = board ==> affichage board dans content */
 
 		$('#board').click(function(e) {
 			e.preventDefault();
@@ -108,7 +109,18 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 				type : 'GET',
 				dataType : 'html',
 				success : function(code_html, statut) {
-					//$(code_html).appendTo('#content');
+					$('#content').html(code_html);
+				}
+			});
+		});
+
+		$('#compte').click(function(e) {
+			e.preventDefault();
+			$.ajax({
+				url : 'compte.jsp',
+				type : 'GET',
+				dataType : 'html',
+				success : function(code_html, statut) {
 					$('#content').html(code_html);
 				}
 			});
@@ -121,7 +133,6 @@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 				type : 'GET',
 				dataType : 'html',
 				success : function(code_html, statut) {
-					//$(code_html).appendTo('#content');
 					$('#content').html(code_html);
 				}
 			});

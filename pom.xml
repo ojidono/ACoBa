@@ -34,7 +34,7 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<jdbc.url>jdbc:mysql://localhost:3306/blog</jdbc.url>
+				<jdbc.url>jdbc:mysql://localhost:3306/ACoba</jdbc.url>
 				<jdbc.user>root</jdbc.user>
 				<jdbc.password>root</jdbc.password>
 				<jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
