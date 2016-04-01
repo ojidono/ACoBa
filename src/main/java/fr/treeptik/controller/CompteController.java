@@ -15,7 +15,7 @@ public class CompteController extends GenericController<Compte> {
 	
 	@Inject
 	public CompteController(CompteService service){
-		super(service);
+		super(service,"compte");
 		this.mainService = service;
 	}
 }

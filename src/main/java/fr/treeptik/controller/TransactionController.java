@@ -25,7 +25,7 @@ public class TransactionController extends GenericController<Transaction> {
 	
 	@Inject
 	public TransactionController(TransactionService service){
-		super(service);
+		super(service,"transaction");
 		this.mainService = service;
 	}
 
