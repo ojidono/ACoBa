@@ -9,7 +9,7 @@ import fr.treeptik.pojo.User;
 import fr.treeptik.service.UserService;
 
 @Controller
-@RequestMapping(value = "/api/user")
+@RequestMapping(value = "api/user")
 public class UserController extends GenericController<User> {
 	private UserService mainService;
 	

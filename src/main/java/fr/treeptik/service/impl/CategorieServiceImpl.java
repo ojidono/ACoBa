@@ -13,9 +13,9 @@ public class CategorieServiceImpl extends GenericServiceImpl<Categorie, Long> im
 	private CategorieDAO mainDAO;
 
 	@Inject
-	public CategorieServiceImpl(CategorieDAO article) {
-		super(article);
-		this.mainDAO = article;
+	public CategorieServiceImpl(CategorieDAO dao) {
+		super(dao);
+		this.mainDAO = dao;
 	}
 
 }

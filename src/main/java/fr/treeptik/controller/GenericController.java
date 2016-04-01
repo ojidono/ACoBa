@@ -47,6 +47,7 @@ public abstract class GenericController <T> {
 	@RequestMapping(value = "/save", method = RequestMethod.GET)
 	public ModelAndView save() {
 		ModelAndView retour = new ModelAndView();
+		System.out.println("YAHA");
 		try {
 			retour.addObject("entity", classeObjet.newInstance());
 		} catch (InstantiationException e) {

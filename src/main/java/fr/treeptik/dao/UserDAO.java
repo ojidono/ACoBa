@@ -12,8 +12,8 @@ import fr.treeptik.pojo.User;
 @Repository
 public interface UserDAO extends JpaRepository<User, Long> {
 	
-	@Query("SELECT c FROM User JOIN FETCH Compte c") 
-	public List<Compte> getAccounts();
-	
-	public User findByIdAndPass(String id, String pass);
+//	@Query("SELECT c FROM User JOIN FETCH Compte c") 
+//	public List<Compte> getAccounts();
+//	
+//	public User findByIdAndPass(String id, String pass);
 }

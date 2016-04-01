@@ -13,8 +13,8 @@ public class CompteServiceImpl extends GenericServiceImpl<Compte, Long> implemen
 	private CompteDAO mainDAO;
 
 	@Inject
-	public CompteServiceImpl(CompteDAO article) {
-		super(article);
-		this.mainDAO = article;
+	public CompteServiceImpl(CompteDAO dao) {
+		super(dao);
+		this.mainDAO = dao;
 	}
 }

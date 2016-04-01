@@ -13,8 +13,8 @@ public class UserServiceImpl extends GenericServiceImpl<User, Long> implements U
 	private UserDAO mainDAO;
 
 	@Inject
-	public UserServiceImpl(UserDAO article) {
-		super(article);
-		this.mainDAO = article;
+	public UserServiceImpl(UserDAO dao) {
+		super(dao);
+		this.mainDAO = dao;
 	}
 }
