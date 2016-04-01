@@ -67,7 +67,7 @@
 
 							<div class="panel-body">
 								<c:url var="createUser" value="/api/user/save" />
-								<form:form action="${createUser}" commandName="user"
+								<form:form action="${createUser}" commandName="content"
 									method="GET">
 									
 									<div class="form-group">
