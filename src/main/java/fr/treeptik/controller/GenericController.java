@@ -8,7 +8,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import fr.treeptik.service.GenericService;
 
-public abstract class GenericController <T>{
+/**
+ * Implémentation du CRUD
+ * @return retour (ModelAndView): contient 2 objects: 
+ * 		page: [nom de la table]/[nom de de la méthode]
+ * 		content: divers contenus attendus  
+ */
+public abstract class GenericController <T> {
 	public GenericService<T, Long> genericService;
 	public String table;
 	
