@@ -15,7 +15,7 @@ public class CategorieController extends GenericController<Categorie> {
 	
 	@Inject
 	public CategorieController(CategorieService service){
-		super(service,"categorie");
+		super(service,"categorie", Categorie.class);
 		this.mainService = service;
 	}
 }

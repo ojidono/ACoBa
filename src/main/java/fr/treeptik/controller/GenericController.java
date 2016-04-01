@@ -17,10 +17,12 @@ import fr.treeptik.service.GenericService;
 public abstract class GenericController <T> {
 	public GenericService<T, Long> genericService;
 	public String table;
+	public Class<T> classeObjet;
 	
-	public GenericController(GenericService<T, Long> service, String table){
+	public GenericController(GenericService<T, Long> service, String table, Class<T> classObjet){
 		this.genericService = service;
 		this.table = table;
+		this.classeObjet = classObjet;
 	}
 
 	@RequestMapping(value = "/list/all", method = RequestMethod.GET)
@@ -40,6 +42,18 @@ public abstract class GenericController <T> {
 	public ModelAndView save(@RequestBody T entity) {
 		ModelAndView retour = new ModelAndView("", "page", table+"/save");
 		retour.addObject("content", genericService.save(entity));
+		return retour;
+	}
+	@RequestMapping(value = "/save", method = RequestMethod.GET)
+	public ModelAndView save() {
+		ModelAndView retour = new ModelAndView();
+		try {
+			retour.addObject("entity", classeObjet.newInstance());
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
 		return retour;
 	}
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)

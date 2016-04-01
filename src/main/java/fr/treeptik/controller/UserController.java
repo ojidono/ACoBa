@@ -15,7 +15,7 @@ public class UserController extends GenericController<User> {
 	
 	@Inject
 	public UserController(UserService service){
-		super(service,"user");
+		super(service,"user", User.class);
 		this.mainService = service;
 	}
 }
